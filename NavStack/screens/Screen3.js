@@ -17,6 +17,12 @@ export default function Screen3({ navigation }) {
           onPress={() => navigation.navigate('Screen2')}
         />
       </View>
+      <View style={{margin: 10}}>
+        <Button
+          title="Regresar a la pantalla anterior"
+          onPress={() => navigation.goBack()}
+        />
+      </View>
     </View>
   );
 }
