@@ -19,7 +19,8 @@ export default function Screen2({ navigation }) {
       </View>
       <View style={{margin: 10}}>
         <Button
-          title="Regresar a la pantalla anterior"
+          color='red'
+          title="Regresar"
           onPress={() => navigation.goBack()}
         />
       </View>
