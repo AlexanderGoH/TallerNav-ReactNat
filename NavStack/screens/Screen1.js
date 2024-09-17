@@ -6,7 +6,7 @@ export default function Screen1({ navigation }) {
   const saludo = 'Saludo enviado desde Screen1!';
   return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Screen 1</Text>
+      <Text style={{fontWeight: 'bold', fontSize: 20}}>Screen 1</Text>
 
       <View style={{margin: 10}}> 
         <Button
@@ -21,7 +21,7 @@ export default function Screen1({ navigation }) {
           onPress={() => navigation.navigate('Screen3')}
         />
       </View>
-      
+
       <View style={{margin: 10}}>
         <Button
           color='red'

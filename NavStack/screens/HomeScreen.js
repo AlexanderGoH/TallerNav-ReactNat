@@ -4,7 +4,7 @@ import { Button, View, Text } from 'react-native';
 export default function Screen1({ navigation }) {
   return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home</Text>
+      <Text style={{fontWeight: 'bold', fontSize: 20}}>Home</Text>
       <View style={{margin: 10}}> 
         <Button
           title="Ir a la pantalla 1"

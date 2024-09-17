@@ -8,7 +8,7 @@ export default function Screen2({ navigation, route }) {
 
   return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Screen 2</Text>
+      <Text style={{fontWeight: 'bold', fontSize: 20}}>Screen 2</Text>
       <Text>{saludo}</Text>
 
       <View style={{margin: 10}}> 

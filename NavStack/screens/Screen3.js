@@ -7,7 +7,7 @@ export default function Screen3({ navigation, route}) {
 
   return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Screen 3</Text>
+      <Text style={{fontWeight: 'bold', fontSize: 20}}>Screen 3</Text>
       <Text>{mensaje}</Text>
 
       <View style={{margin: 10}}> 
