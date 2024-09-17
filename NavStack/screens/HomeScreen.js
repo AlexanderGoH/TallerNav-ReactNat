@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, View, Text, StyleSheet } from 'react-native';
+import { Button, View, Text } from 'react-native';
 
 export default function Screen1({ navigation }) {
   return(
