@@ -3,7 +3,7 @@ import { Button, View, Text } from 'react-native';
 
 export default function Screen2({ navigation, route }) {
 
-  const { saludo } = route.params;
+  const { saludo } = route.params || {};
   const mensaje = 'Screen2 es mejor que Screen1 😛';
 
   return(

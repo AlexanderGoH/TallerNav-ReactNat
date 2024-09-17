@@ -3,7 +3,7 @@ import { Button, View, Text } from 'react-native';
 
 export default function Screen3({ navigation, route}) {
 
-  const { mensaje } = route.params;
+  const { mensaje } = route.params || {};
 
   return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
