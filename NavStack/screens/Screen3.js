@@ -5,6 +5,13 @@ export default function Screen3({ navigation, route}) {
 
   const { mensaje } = route.params || {};
 
+  const resetear = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Screen1' }],
+    });
+  };
+
   return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text style={{fontWeight: 'bold', fontSize: 20}}>Screen 3</Text>
@@ -29,6 +36,14 @@ export default function Screen3({ navigation, route}) {
           color='red'
           title="Regresar"
           onPress={() => navigation.goBack()}
+        />
+      </View>
+
+      <View style={{margin: 10}}>
+        <Button
+          color='purple'
+          title="Resetear"
+          onPress={resetear}
         />
       </View>
     </View>
