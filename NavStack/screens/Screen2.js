@@ -5,6 +5,7 @@ export default function Screen2({ navigation, route }) {
 
   const { saludo } = route.params || {};
   const mensaje = 'Screen2 es mejor que Screen1 😛';
+  const authenticated = true;
 
   return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -21,7 +22,7 @@ export default function Screen2({ navigation, route }) {
       <View style={{margin: 10}}> 
         <Button
           title="Ir a la pantalla 3"
-          onPress={() => navigation.navigate('Screen3', {mensaje})}
+          onPress={() => navigation.navigate('Screen3', {mensaje, authenticated})}
         />
       </View>
 
@@ -29,7 +30,7 @@ export default function Screen2({ navigation, route }) {
         <Button
          color='green'
           title="Reemplazar con la pantalla 3"
-          onPress={() => navigation.replace('Screen3', {mensaje})}
+          onPress={() => navigation.replace('Screen3', {mensaje, authenticated})}
         />
       </View>
 
