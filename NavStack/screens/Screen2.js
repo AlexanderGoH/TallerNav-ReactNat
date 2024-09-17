@@ -25,6 +25,14 @@ export default function Screen2({ navigation, route }) {
         />
       </View>
 
+      <View style={{margin: 10}}> 
+        <Button
+         color='green'
+          title="Reemplazar con la pantalla 3"
+          onPress={() => navigation.replace('Screen3', {mensaje})}
+        />
+      </View>
+
       <View style={{margin: 10}}>
         <Button
           color='red'
