@@ -1,20 +1,40 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native'; 
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+
+// Pantallas
+import ImageScreen from './screens/ImageScreen';
+import OptionsScreen from './screens/OptionsScreen';
+import QuizScreen from './screens/QuizScreen';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen 
+          name="Image" 
+          options={{tabBarIcon: ({color, size}) => (
+            <Ionicons name="images-outline" size={size} color={color} />
+          )}}
+          component={ImageScreen} 
+        />
+        <Tab.Screen 
+          name="Options"
+          options={{tabBarIcon: ({color, size}) => (
+            <Ionicons name="options-outline" size={size} color={color} />
+          )}} 
+          component={OptionsScreen} 
+        />
+        <Tab.Screen 
+          name="Quiz" 
+          options={{tabBarIcon: ({color, size}) => (
+            <Ionicons name="document-text-outline" size={size} color={color} />
+          )}}
+          component={QuizScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
