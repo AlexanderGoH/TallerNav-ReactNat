@@ -21,14 +21,6 @@ export default function Screen1({ navigation }) {
           onPress={() => navigation.navigate('Screen3')}
         />
       </View>
-
-      <View style={{margin: 10}}>
-        <Button
-          color='red'
-          title="Regresar"
-          onPress={() => navigation.goBack()}
-        />
-      </View>
     </View>
   );
 }
