@@ -13,7 +13,14 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+      screenOptions={{
+        tabBarStyle: { paddingBottom: 5, paddingTop: 5, backgroundColor: '#1d1145' },
+        tabBarItemStyle: { marginHorizontal: 15 },
+        tabBarActiveTintColor: '#ccff00',
+        tabBarInactiveTintColor: 'lightblue',
+      }}
+      >
         <Tab.Screen 
           name="Image" 
           options={{tabBarIcon: ({color, size}) => (
